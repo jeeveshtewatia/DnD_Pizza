@@ -5,7 +5,11 @@
 }
 
 body {
-    background: linear-gradient(270deg, rgb(228, 228, 97), pink, rgb(191, 140, 228), rgb(129, 224, 129));
+    /* background: linear-gradient(270deg, rgb(228, 228, 97), pink, rgb(191, 140, 228), rgb(129, 224, 129)); */
+    background: url("./BriefGrandioseKillifish-mobile.mp4");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
 }
 
 header {
@@ -30,6 +34,13 @@ header {
     100% {
         color: yellowgreen
     }
+}
+
+.fixed {
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+
 }
 
 .container {
@@ -63,13 +74,13 @@ header {
 }
 
 .box1 {
-    background-image: url("https://www.akcrust.com/hubfs/Blog_Images/Pizza-slice-pizza.jpg");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJYlqf5QRhpwxjcpjBjxyq7HMd7oT24EDBnBwkFV2uFVxQIA-8fOHWvVTsNH7O99FFZs8&usqp=CAU");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
 .box2 {
-    background-image: url("https://images.101cookbooks.com/PIZZA-DOUGH-RECIPE-h.jpg?w=1200&auto=format");
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_h3p2KGIkGU1h175VcgUckBFxczyp7G_E9w&usqp=CAU");
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -101,6 +112,9 @@ header {
     }
 }
 
+.hovered {
+    /* background-color: brown; */
+}
 
 .dragging {
     opacity: 0.5;
@@ -110,7 +124,8 @@ header {
 .top {
     display: flex;
     justify-content: space-evenly;
-
+    gap: 30px;
+    margin-bottom: 50px;
 }
 
 .top div {
@@ -148,4 +163,58 @@ header {
     background-image: url("https://images.unsplash.com/photo-1629740001727-f9ad15f720c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2Fwc2ljdW0lMjBwaXp6YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+}
+
+/*======================= media querry==========================  */
+
+@media screen and (max-width:768px) and (min-width:481px) {
+
+    body {
+        background: linear-gradient(to left, #6aade9, #e9868c, #ffaf7b, #c33764);
+    }
+
+    .container {
+        justify-content: space-evenly;
+    }
+
+    .top {
+
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    header {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
+}
+
+/* ===========small screens==================== */
+@media screen and (max-width:480px) {
+
+    body {
+        background: linear-gradient(270deg, rgb(228, 228, 97), pink, rgb(191, 140, 228), rgb(129, 224, 129));
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        height: 500px;
+    }
+
+    .top {
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+
+    header {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 16px;
+    }
 }

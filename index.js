@@ -52,17 +52,17 @@ function dragEnd2() {
 let array = [
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT1ezdPHbb2Kdv9P0GkBncM3TX1pw3cwydmA&usqp=CAU",
-    head: "Onion",
+    head: "Onion / \u20b9 69",
     id: 1,
   },
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDg2KSexEWrtESZ3fsl03E_fy0wgbLj2RhyQ&usqp=CAU",
-    head: "Paneer",
+    head: "Paneer / \u20b9  99",
     id: 2,
   },
   {
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQISm7xv1cC2argAWk-fijv4yGKj885sYO4hQ&usqp=CAU",
-    head: "Capsicum",
+    head: "Capsicum / \u20b9  39",
     id: 3,
   },
 ];
@@ -104,6 +104,7 @@ function toppingConst() {
   function dragStartChilly() {
     console.log("drag started chilly");
     setTimeout(() => {
+      amount += 69;
       topp = true;
       topItem = "chilly";
       this.classList.add("dragging");
@@ -125,6 +126,7 @@ function toppingConst() {
   function dragStartPaneer() {
     console.log("drag started paneer");
     setTimeout(() => {
+      amount += 99;
       topp = true;
       topItem = "paneer";
       this.classList.add("dragging");
@@ -146,6 +148,7 @@ function toppingConst() {
   function dragStartCapsicum() {
     console.log("drag started capsicum");
     setTimeout(() => {
+      amount += 39;
       topp = true;
       topItem = "capsicum";
       this.classList.add("dragging");
@@ -159,7 +162,10 @@ function toppingConst() {
     this.classList.remove("dragging");
   }
 }
-
+// =========Total amount (Price)===============
+function amountp() {
+  document.getElementById("amount").innerHTML = amount;
+}
 //===============functionality for final Pizza ========================
 pizza.addEventListener("dragover", dragOver);
 pizza.addEventListener("dragenter", dragEnter);
@@ -181,6 +187,7 @@ function dragLeave() {
 
 function dragDrop(e) {
   topping();
+  amountp();
   if (base) {
     this.className = dragItem;
   }
