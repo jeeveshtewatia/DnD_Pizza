@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(89, 117, 76);
+}
+
+.container {
+    height: 200px;
+    width: 100vw;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.container>div {
+    height: 200px;
+    width: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.container>div div {
+    height: 200px;
+    width: 180px;
+    background-color: aquamarine;
+    border-radius: 50%;
+
+}
+
+.box1 {
+    background-image: url("https://www.akcrust.com/hubfs/Blog_Images/Pizza-slice-pizza.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.box2 {
+    background-image: url("https://images.101cookbooks.com/PIZZA-DOUGH-RECIPE-h.jpg?w=1200&auto=format");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+
+#main {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 2px dashed rgb(12, 185, 212);
+    margin: 50px auto;
+    padding: 5px;
+
+}
+
+
+.dragging {
+    opacity: 0.5;
+    border: 5px solid red;
+}
+
+.top {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.top div {
+    height: 250px;
+    width: 200px;
+
+}
+
+.top img {
+    height: 70%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.top h3 {
+    text-align: center;
+}
+
+.chilly {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVVpdJ8BQ0HvJvjV_xqYp3QmGGYEa47AlyBw&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.paneer {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyhErEL5-NMiNC8V_ll056fDgygHPYqUHQAA&usqp=CAU");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.capsicum {
+    background-image: url("https://images.unsplash.com/photo-1629740001727-f9ad15f720c4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Y2Fwc2ljdW0lMjBwaXp6YXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
