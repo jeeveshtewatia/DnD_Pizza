@@ -6,7 +6,7 @@ let boxOne = "box1";
 let boxTwo = "box2";
 let count = 1;
 let dragItem = null;
-
+let amount = 0;
 let topItem = null;
 let topp = false;
 let base = true;
@@ -18,6 +18,7 @@ box1.addEventListener("dragend", dragEnd);
 function dragStart() {
   console.log("drag started ");
   setTimeout(() => {
+    amount += 429;
     dragItem = boxOne;
     this.classList.add("dragging");
   }, 0);
@@ -35,6 +36,7 @@ box2.addEventListener("dragend", dragEnd2);
 function dragStart2() {
   console.log("drag started ");
   setTimeout(() => {
+    amount += 549;
     dragItem = boxTwo;
     this.classList.add("dragging");
   }, 0);
@@ -49,8 +51,8 @@ function dragEnd2() {
 //=======================data for ingredients ==================
 let array = [
   {
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNwLyqXYhWkQbscMd9CU-Dg4qC_hUD1-edCg&usqp=CAU",
-    head: "Chilly",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQT1ezdPHbb2Kdv9P0GkBncM3TX1pw3cwydmA&usqp=CAU",
+    head: "Onion",
     id: 1,
   },
   {
@@ -67,10 +69,13 @@ let array = [
 
 // ==================function for uploading ingredients on web ============================
 function topping() {
+  pizza.innerHTML = "";
   if (count == 1) {
     let top = document.querySelector(".top");
+
     array.forEach((item) => {
       let div = document.createElement("div");
+      div.setAttribute("class", "child animate__animated animate__fadeInDown");
       let h3 = document.createElement("h3");
       let img = document.createElement("img");
 
@@ -174,7 +179,7 @@ function dragLeave() {
   this.className = " drag";
 }
 
-function dragDrop() {
+function dragDrop(e) {
   topping();
   if (base) {
     this.className = dragItem;
@@ -182,4 +187,5 @@ function dragDrop() {
   if (topp) {
     this.className = topItem;
   }
+  // e.target.classList = "box2";
 }
