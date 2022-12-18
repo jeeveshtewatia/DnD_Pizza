@@ -9,6 +9,10 @@ body {
 
 }
 
+img {
+    cursor: pointer;
+}
+
 header {
     text-align: center;
     font-size: 36px;
@@ -67,6 +71,7 @@ header {
     width: 180px;
     background-color: aquamarine;
     border-radius: 15%;
+    cursor: pointer;
 
 }
 
@@ -133,6 +138,7 @@ header {
     height: 70%;
     width: 100%;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .top h3 {
