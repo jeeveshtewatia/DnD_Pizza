@@ -5,11 +5,8 @@
 }
 
 body {
-    /* background: linear-gradient(270deg, rgb(228, 228, 97), pink, rgb(191, 140, 228), rgb(129, 224, 129)); */
-    background: url("./BriefGrandioseKillifish-mobile.mp4");
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
+    background: linear-gradient(270deg, rgb(228, 228, 97), pink, rgb(191, 140, 228), rgb(129, 224, 129));
+
 }
 
 header {
@@ -110,10 +107,6 @@ header {
     100% {
         transform: scale(1);
     }
-}
-
-.hovered {
-    /* background-color: brown; */
 }
 
 .dragging {
